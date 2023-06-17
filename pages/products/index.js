@@ -14,8 +14,7 @@ export async function getStaticProps() {
     };
 }
 
-export default function ProductsPage({ products }) {
-
+export default function Index({ products }) {
   return (
     <>
       <Head>
@@ -25,7 +24,7 @@ export default function ProductsPage({ products }) {
       <div className={styles.container}>
         {products.map(item => (
           <div key={item.id}>
-          <Link href={"/product/"+ item.id}>
+          <Link href={"/products/"+ item.id}>
             <h2 className={styles.title}>{item.title}</h2>
             <Image src={item.thumbnail} width={300} height={300}/>
           </Link>
@@ -35,4 +34,5 @@ export default function ProductsPage({ products }) {
     </>
   );
 }
+
 
