@@ -1,13 +1,18 @@
 import Link from "next/link"
+import Image from "next/image"
+
 export default function Navbar() {
-    return(
-        <nav>
-            <div>
-                <h1>Shopping</h1>
-            </div>
-            <Link href="/">Home page</Link>
-            <Link href="/about">about</Link>
-            <Link href="/products">all products</Link>
-        </nav>
-    )
+  return (
+    <nav>
+      <div className="logo">
+        <Link href="/">
+            <Image src="/logo.png" width={50} height={50} alt="logo" />
+        </Link>
+        <h2>All the mall shopping</h2>
+      </div>
+      <Link href="/">Home page</Link>
+      <Link href="/about">About</Link>
+      <Link href="/products">All Products</Link>
+    </nav>
+  )
 }
